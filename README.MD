@@ -11,7 +11,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
 
 ## Smart Contract ABI
   - Get the ABI of your smart contract
-  - Store ABI in your project (eg: [smartContractABI.js]())
+  - Store ABI in your project (eg: [smartContractABI.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractABI.example.js))
 
         const ABI = [
           // put your ABI here
@@ -20,7 +20,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
         module.exports = ABI    
 
 ## Payment Pointers List
-  - Create a list of payment pointers in case you don't want to use a smart contract (eg: [paymentPointers.js]())
+  - Create a list of payment pointers in case you don't want to use a smart contract (eg: [paymentPointers.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/paymentPointers.js))
 
         const pointers = {
           '$alice.example': 50,
@@ -32,7 +32,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
         module.exports = pointers
 
 ## Config File
-  - Create a config file to store all the parameters required (eg: [config.js]())
+  - Create a config file to store all the parameters required (eg: [config.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/config.example.js))
 
         const config = {
           server: {
