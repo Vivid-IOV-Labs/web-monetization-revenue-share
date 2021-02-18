@@ -1,8 +1,9 @@
-const config = require('./config')
+const config = require(global.configFilePath)
+var path = require('path');
 const util = require('util')
 const Web3 = require('web3');
 var web3 = new Web3(config.smartContract.provider);
-const { ABI } = require(config.smartContract.abiFilePath)
+const ABI = require(path.join(global.appRoot, config.smartContract.abiFilePath))
 
 
 const _pointer = async (useReceiptVerification) => {
