@@ -6,6 +6,7 @@ var path = require('path');
 const fetch = require("node-fetch");
 var cors = require('cors')
 global.appRoot = path.join(__dirname, '../../')
+// global.appRoot = path.join(__dirname, '../gftw-server-demo')
 
 start = (configFilePath) => {
   global.configFilePath = path.join(global.appRoot, configFilePath)
@@ -109,5 +110,5 @@ start = (configFilePath) => {
 
 
 module.exports.start = (configFilePath) => { 
-  start(configFilePath) 
+  start(configFilePath)
 }
