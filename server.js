@@ -5,8 +5,8 @@ var app = express();
 var path = require('path');
 const fetch = require("node-fetch");
 var cors = require('cors')
-global.appRoot = path.join(__dirname, '../../')
-// global.appRoot = path.join(__dirname, '../gftw-server-demo')
+// global.appRoot = path.join(__dirname, '../../')
+global.appRoot = path.join(__dirname, '../gftw-server-demo')
 
 start = (configFilePath) => {
   global.configFilePath = path.join(global.appRoot, configFilePath)
@@ -80,6 +80,8 @@ start = (configFilePath) => {
   app.get('/', async function (req, res, next) {
     // is this request meant for Web Monetization?
 
+    console.log('Req headers: ')
+    console.log(JSON.stringify(req.headers));
     if (req.header('accept').includes('application/spsp4+json')) {
       console.log('Revenue sharing active')
 
@@ -106,6 +108,7 @@ start = (configFilePath) => {
     }
   })
 
+  pickPointerSmartContract(true)
 }
 
 
