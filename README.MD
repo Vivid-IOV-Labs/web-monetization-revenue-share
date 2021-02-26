@@ -11,7 +11,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
 
 ## Smart Contract ABI
   - Get the ABI of your smart contract
-  - Store ABI in your project (eg: [smartContractABI.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractABI.example.js))
+  - Store ABI in your project (eg: [smartContractInfo.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractInfo.example.js))
 
         const address = "yourAddress";
         const ABI = [
@@ -155,4 +155,4 @@ _The frontend should be on a different server, for example in a different Heroku
     </head>
 
 
-You can find a full working example [here](https://github.com/Vivid-IOV-Labs/gftw-server-demo).
+You may find a full working example [here](https://github.com/Vivid-IOV-Labs/gftw-server-demo).
