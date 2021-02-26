@@ -12,9 +12,9 @@ const config = {
     verifier: 'https://webmonetization.org/api/receipts/verify'
   },
   smartContract: {
-    provider: `wss://rinkeby.infura.io/ws/v3/${process.env.INFURA_KEY}`,
-    address: '0x99deC650eb882c522ef49a5002Ff11fEdF5A146c',
-    abiFilePath: './smartContractABI'
+    provider: 'rinkeby',  // use the network of your choice
+    key: process.env.INFURA_KEY,  // eg: If using Infura to access rinkeby use your Infura Project Key here 
+    abiFilePath: './smartContractInfo'
   }
  };
  

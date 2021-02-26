@@ -1,18 +1,29 @@
 {
   "name": "web-monetization-revenue-share",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Revenue sharing using smart contract in Web-monetization",
   "main": "server.js",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.5",
-    "ethers": "^5.0.31",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1",
-    "web3": "^1.3.3"
+    "ethers": "^5.0.31"
   },
   "scripts": {
     "start": "node server.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share"
+  },
+  "keywords": [
+    "web-monetization",
+    "coil",
+    "web3",
+    "revenue sharing",
+    "smart contract"
+  ],
+  "author": "Vivid-IOV-Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/issues"
+  },
+  "homepage": "https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share"
 }
