@@ -16,7 +16,7 @@ const itx = new ethers.providers.InfuraProvider(
 
 const revShareContract = new ethers.Contract(config.smartContract.address, ABI, itx);
 
-const _pointer = async (useReceiptVerification) => {
+const _pickPointer = async () => {
   // var contract = new web3.eth.Contract(ABI, config.smartContract.address)
 
   try {
@@ -41,14 +41,13 @@ const _pointer = async (useReceiptVerification) => {
     console.log(error)
   }
 
-  if (useReceiptVerification) {
+  if (config.useReceiptVerification == 'true') {
     pointer = config.receiptVerification.service + encodeURIComponent(pointer)
   }
 
-  console.log(pointer)
   return pointer
 }
 
-module.exports = (useReceiptVerification) => {
-  return _pointer(useReceiptVerification)
+module.exports = {
+  pickPointer: _pickPointer
 };
