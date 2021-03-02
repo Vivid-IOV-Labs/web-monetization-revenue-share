@@ -1,7 +1,8 @@
 # Web Monetization Revenue Sharing
 
 Use [web monetization](https://webmonetization.org) probabilistic revenue sharing in the backend together with a smart contract. <br>
-Also able to include [receipt verification](https://webmonetization.org/docs/receipt-verifier).
+Also able to include [receipt verification](https://webmonetization.org/docs/receipt-verifier).<br>
+This module uses as default smart contract connection settings for Infura.
 
 # Install
     
@@ -11,26 +12,24 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
 
 ## Smart Contract ABI
   - Get the ABI of your smart contract
-  - Store ABI in your project (eg: [smartContractInfo.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractInfo.example.js))
+  - Store ABI in your project (eg: [smartContractInfo.json](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractInfo.example.json))
 
-        const address = "yourAddress";
-        const ABI = [
-          // put your ABI here
-        ]
 
-        module.exports = {
-          address: address,
-          ABI: ABI
-        };
+        {
+          "address": "yourSmartContractAddress",
+          "ABI": [
+            // your smart contract ABI
+          ]
+        }
 
 ## Payment Pointers List
-  - Create a list of payment pointers in case you don't want to use a smart contract (eg: [paymentPointers.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/paymentPointers.js))
+  - Create a list of payment pointers in case you don't want to use a smart contract (eg: [paymentPointers.js](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/paymentPointers.example.js))
 
         const pointers = {
           '$alice.example': 50,
           '$bob.example': 40,
-          '$connie.example': 9.5,
-          '$dave.example': 0.5
+          '$connie.example': 9,
+          '$dave.example': 1
         }
 
         module.exports = pointers
@@ -52,7 +51,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
           smartContract: {
             provider: 'rinkeby', // use the network of your choice
             key: yourKeyForRinkeby, // eg: If using Infura to access rinkeby use your Infura Project Key here 
-            abiFilePath: './smartContractInfo'
+            smartContractInfoFilePath: './smartContractInfo.json'
           }
         };
       
@@ -63,7 +62,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
 
     const wmRevenueShare = require('web-monetization-revenue-share')
     wmRevenueShare.setUp('/config')
-    const paymentPointerUrl = await wmRevenueShare.pointerUrl()
+    const paymentPointerUrl = await wmRevenueShare.getPointerUrl()
 
 
 ## Express Example 
@@ -109,7 +108,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
       
       if (req.header('accept').includes('application/spsp4+json')) {
         console.log('Revenue sharing active')
-        const paymentPointerUrl = await wmRevenueShare.pointerUrl()
+        const paymentPointerUrl = await wmRevenueShare.getPointerUrl()
         console.log(`Payment pointer: ${paymentPointerUrl}`)
 
         // redirect to our chosen payment pointer so they get paid
@@ -124,7 +123,7 @@ Also able to include [receipt verification](https://webmonetization.org/docs/rec
 <br>
 
 ##### index.ejs (on the frontend) 
-_The frontend should be on a different server, for example in a different Heroku instance_
+_The frontend could be on a different server, for example in a different Heroku instance_
 
 
     <head>

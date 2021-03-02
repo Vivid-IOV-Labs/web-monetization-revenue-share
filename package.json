@@ -1,6 +1,6 @@
 {
   "name": "web-monetization-revenue-share",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Revenue sharing using smart contract in Web-monetization",
   "main": "server.js",
   "dependencies": {

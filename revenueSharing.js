@@ -1,5 +1,5 @@
 var path = require('path');
-const { ABI, address } = require(path.join(global.appRoot, global.config.smartContract.abiFilePath))
+const { ABI, address } = require(path.join(global.appRoot, global.config.smartContract.smartContractInfoFilePath))
 const { ethers } = require('ethers')
 
 const itx = new ethers.providers.InfuraProvider(

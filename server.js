@@ -36,7 +36,7 @@ pickPointer = () => {
   }
 }
 
-pointerUrl = async () => {
+getPointerUrl = async () => {
   const smartContract = require('./revenueSharing')
   const useSmartContract = (global.config.useSmartContract == 'true')
 
@@ -49,11 +49,10 @@ pointerUrl = async () => {
   
   const asUrl = new URL(pointer.startsWith('$') ? 'https://' + pointer.substring(1) : pointer)
   asUrl.pathname = asUrl.pathname === '/' ? '/.well-known/pay' : asUrl.pathname
-  
   return asUrl.href
 }
 
 module.exports = { 
   setUp: setUp,
-  pointerUrl: pointerUrl
+  getPointerUrl: getPointerUrl
 }
