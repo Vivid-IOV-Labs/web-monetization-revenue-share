@@ -14,7 +14,7 @@ const config = {
   smartContract: {
     provider: 'rinkeby',  // use the network of your choice
     key: process.env.INFURA_KEY,  // eg: If using Infura to access rinkeby use your Infura Project Key here 
-    abiFilePath: './smartContractInfo'
+    smartContractInfoFilePath: './smartContractInfo.json'
   }
  };
  
