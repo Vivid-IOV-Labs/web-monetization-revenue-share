@@ -155,3 +155,18 @@ _The frontend could be on a different server, for example in a different Heroku 
 
 
 You may find a full working example [here](https://github.com/Vivid-IOV-Labs/gftw-server-demo).
+
+
+# Test
+### Test the npm package
+  - Download repository
+
+        git clone https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share.git
+  
+  - Install
+    
+        npm install
+
+  - Run tests
+
+        npm test

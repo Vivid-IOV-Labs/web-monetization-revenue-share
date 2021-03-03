@@ -4,10 +4,14 @@
   "description": "Revenue sharing using smart contract in Web-monetization",
   "main": "server.js",
   "dependencies": {
-    "ethers": "^5.0.31"
+    "chai": "^4.3.0",
+    "dotenv": "^8.2.0",
+    "ethers": "^5.0.31",
+    "mocha": "^8.3.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node ./node_modules/mocha/bin/mocha test/unit/**/*.test.js"
   },
   "repository": {
     "type": "git",
