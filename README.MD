@@ -11,7 +11,7 @@ This module uses as default smart contract connection settings for Infura.
 # Setup
 
 ## Smart Contract ABI
-  - Get the ABI of your smart contract
+  - Get the ABI of your smart contract (make sure there is at least one payment pointer in the smart contract)
   - Store ABI in your project (eg: [smartContractInfo.json](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractInfo.example.json))
 
 
@@ -154,8 +154,8 @@ _The frontend could be on a different server, for example in a different Heroku 
     </head>
 
 
-You may find a full working example [here](https://github.com/Vivid-IOV-Labs/gftw-server-demo).
-
+You may find a full working example [here](https://github.com/Vivid-IOV-Labs/gftw-server-demo). <br>
+You may find a full working Smart Contract [here](https://github.com/Vivid-IOV-Labs/revenue-share-smart-contract).
 
 # Test
 ### Test the npm package
