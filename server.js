@@ -1,6 +1,6 @@
 var path = require('path');
 global.appRoot = path.join(__dirname, '../../')
-// global.appRoot = path.join(__dirname, '../gftw-server-demo')
+// global.appRoot = path.join(__dirname, '../wp-server-demo')
 
 setUp = (configFilePath) => {
   const absoluteConfigFilePath = path.join(global.appRoot, configFilePath)
