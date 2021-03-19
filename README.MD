@@ -154,7 +154,7 @@ _The frontend could be on a different server, for example in a different Heroku 
     </head>
 
 
-You may find a full working example [here](https://github.com/Vivid-IOV-Labs/wp-server-demo). <br>
+You may find a full working example [here](https://github.com/Vivid-IOV-Labs/wm-server-demo). <br>
 You may find a full working Smart Contract [here](https://github.com/Vivid-IOV-Labs/revenue-share-smart-contract).
 
 # Test
