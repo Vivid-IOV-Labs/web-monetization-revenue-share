@@ -11,6 +11,8 @@ This module uses as default smart contract connection settings for Infura.
 # Setup
 
 ## Smart Contract ABI
+  You can find an example of a working Smart Contract [here](https://github.com/Vivid-IOV-Labs/revenue-share-smart-contract). <br><br>
+
   - Get the ABI of your smart contract (make sure there is at least one payment pointer in the smart contract)
   - Store ABI in your project (eg: [smartContractInfo.json](https://github.com/Vivid-IOV-Labs/web-monetization-revenue-share/blob/master/smartContractInfo.example.json))
 
@@ -123,11 +125,11 @@ This module uses as default smart contract connection settings for Infura.
 <br>
 
 ##### index.ejs (on the frontend) 
-_The frontend could be on a different server, for example in a different Heroku instance_
+_Your frontend could be hosted on a different server, if desired_
 
 
     <head>
-      <meta name="monetization" content="https://your-server-running-server.js-file/">  
+      <meta name="monetization" content="https://your-deployed-server-instance-url/">  
       
       <!-- Use this script for receipt verification -->
       <script>
@@ -139,7 +141,7 @@ _The frontend could be on a different server, for example in a different Heroku 
             console.log(event.detail.receipt)
 
             // Connect to your site’s backend to validate the payment. This does NOT connect directly to the receipt verifier.
-            const res = await fetch('https://revsharetest.peerkat.live/verifyReceipt', {
+            const res = await fetch('https://your-deployed-server-instance-url/verifyReceipt', {
               method: 'POST',
               headers: {
                 'content-type': 'application/json'
@@ -154,8 +156,8 @@ _The frontend could be on a different server, for example in a different Heroku 
     </head>
 
 
-You may find a full working example [here](https://github.com/Vivid-IOV-Labs/wm-server-demo). <br>
-You may find a full working Smart Contract [here](https://github.com/Vivid-IOV-Labs/revenue-share-smart-contract).
+You may find a full working example [here](https://github.com/Vivid-IOV-Labs/wm-server-demo).
+
 
 # Test
 ### Test the npm package
